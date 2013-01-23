@@ -1,0 +1,47 @@
+--- C:/Users/RGONZA~1/AppData/Local/Temp/UICam-rev569.svn000.tmp.cs	lun sep 17 14:00:39 2012
++++ D:/rgonzalez/projects/Virtualware_UnityPackages/code/Assets/NGUI/Scripts/UI/UICamera.cs	lun sep 17 14:08:25 2012
+@@ -386,7 +386,7 @@
+ 	/// Returns the object under the specified position.
+ 	/// </summary>
+ 
+-	static bool Raycast (Vector3 inPos, ref RaycastHit hit)
++	static public bool Raycast (Vector3 inPos, ref RaycastHit hit)
+ 	{
+ 		for (int i = 0; i < mList.Count; ++i)
+ 		{
+@@ -556,7 +556,7 @@
+ 	/// Get or create a touch event.
+ 	/// </summary>
+ 
+-	MouseOrTouch GetTouch (int id)
++	public MouseOrTouch GetTouch (int id)
+ 	{
+ 		MouseOrTouch touch;
+ 
+@@ -573,7 +573,7 @@
+ 	/// Remove a touch event from the list.
+ 	/// </summary>
+ 
+-	void RemoveTouch (int id) { mTouches.Remove(id); }
++	public void RemoveTouch (int id) { mTouches.Remove(id); }
+ 
+ 	/// <summary>
+ 	/// Add this camera to the list.
+@@ -679,6 +679,8 @@
+ 		}
+ 		else inputHasFocus = false;
+ 
++        SendMessage("ProcessInput", null, SendMessageOptions.DontRequireReceiver);
++
+ 		// If it's time to show a tooltip, inform the object we're hovering over
+ 		if (useMouse && mHover != null)
+ 		{
+@@ -912,7 +914,7 @@
+ 	/// Process the events of the specified touch.
+ 	/// </summary>
+ 
+-	void ProcessTouch (bool pressed, bool unpressed)
++	public void ProcessTouch (bool pressed, bool unpressed)
+ 	{
+ 		// Send out the press message
+ 		if (pressed)
