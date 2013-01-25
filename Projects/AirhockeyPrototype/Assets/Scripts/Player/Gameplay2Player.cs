@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Gameplay2Player : MonoBehaviour {
 	
@@ -13,6 +14,8 @@ public class Gameplay2Player : MonoBehaviour {
 	private float m_StartTargetLerpFactor;
 	private Vector3 m_StartPosition;
 	private Vector3 m_TargetPosition;
+	private Vector3 m_Velocity;
+	private List <RaycastHit> m_RaycastHits = new List <RaycastHit> ();
 	
 	private bool m_IsSteered;
 	private bool IsSteered {
@@ -60,6 +63,7 @@ public class Gameplay2Player : MonoBehaviour {
 					// => l_Ray.origin.y + l_Factor * l_Ray.direction.y == m_Height
 				float l_Factor = (m_Height - l_Ray.origin.y) / l_Ray.direction.y;
 				m_TargetPosition = l_Ray.origin + l_Factor * l_Ray.direction;
+				m_Velocity = (m_TargetPosition - m_StartPosition) / m_PrevisousDeltaTime;
 			} else {
 				IsSteered = false;
 			}
@@ -70,7 +74,38 @@ public class Gameplay2Player : MonoBehaviour {
 	
 	private void MoveToPosition (Vector3 a_NewPosition) {
 		
-			// TODO: Fake Continues Collission Detection
+			// Fake Continuous Collision Detection
+		Vector3 l_Direction = a_NewPosition - m_Transform.position;
+		
+		RaycastHit[] l_RaycastHits = m_Rigidbody.SweepTestAll (l_Direction.normalized, 1.5f * l_Direction.magnitude);
+		if (l_RaycastHits.Length > 0) {
+			foreach (RaycastHit l_RaycastHit in l_RaycastHits) {
+				if
+					(l_RaycastHit.rigidbody != null &&
+					 l_RaycastHit.rigidbody != m_Rigidbody)
+				{
+						// Only one collision per rigidbody.
+					bool l_IsRigidbodyAlreadyHandled = false;
+					foreach (RaycastHit l_HandledRaycastHit in m_RaycastHits) {
+						if (l_HandledRaycastHit.rigidbody == l_RaycastHit.rigidbody) {
+							l_IsRigidbodyAlreadyHandled = true;
+							break;
+						}
+					}
+					
+					if (!l_IsRigidbodyAlreadyHandled) {
+						m_RaycastHits.Add (l_RaycastHit);
+					}
+				}
+			}
+			
+			foreach (RaycastHit l_RaycastHit in m_RaycastHits) {
+				Rigidbody l_HitRigidbody = l_RaycastHit.rigidbody;
+				l_HitRigidbody.MovePosition (l_HitRigidbody.position + l_Direction);
+				l_HitRigidbody.AddForceAtPosition (m_Velocity * 0.5f, l_RaycastHit.point, ForceMode.VelocityChange);
+			}
+			m_RaycastHits.Clear ();
+		}
 		
 		m_Rigidbody.MovePosition (a_NewPosition);
 	}
