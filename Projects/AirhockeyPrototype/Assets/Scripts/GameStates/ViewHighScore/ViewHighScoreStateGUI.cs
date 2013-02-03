@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Edelweiss.ApplicationState;
 
-public class PlayGameStateGUI : ApplicationStateGUI <PlayGameStateGUI> {
+public class ViewHighScoreStateGUI : ApplicationStateGUI <ViewHighScoreStateGUI> {
 	
 	public override bool IsDestroyedOnLoad {
 		get {

@@ -161,6 +161,9 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\GameStates\ApplicationStateGUI.cs" />
+     <Compile Include="Assets\Scripts\GameStates\Buttons\ContinueToGameIntroductionButtonClickSender.cs" />
+     <Compile Include="Assets\Scripts\GameStates\Buttons\ContinueToHighScoreAndShareButtonClickSender.cs" />
+     <Compile Include="Assets\Scripts\GameStates\Buttons\ContinueToViewHighScoreButtonClickSender.cs" />
      <Compile Include="Assets\Scripts\GameStates\Buttons\DoneButtonClickSender.cs" />
      <Compile Include="Assets\Scripts\GameStates\Buttons\HelpButtonClickSender.cs" />
      <Compile Include="Assets\Scripts\GameStates\Buttons\StartGameButtonClickSender.cs" />
@@ -168,12 +171,17 @@
      <Compile Include="Assets\Scripts\GameStates\Explanation\GameExplanationStateGUI.cs" />
      <Compile Include="Assets\Scripts\GameStates\GameOver\GameOverState.cs" />
      <Compile Include="Assets\Scripts\GameStates\GameOver\GameOverStateGUI.cs" />
+     <Compile Include="Assets\Scripts\GameStates\GameOver\GameOverTimeout.cs" />
      <Compile Include="Assets\Scripts\GameStates\HighScoreAndShare\HighScoreAndShareState.cs" />
+     <Compile Include="Assets\Scripts\GameStates\HighScoreAndShare\HighScoreAndShareStateGUI.cs" />
+     <Compile Include="Assets\Scripts\GameStates\HighScoreAndShare\HighScoreAndShareTimeout.cs" />
      <Compile Include="Assets\Scripts\GameStates\Introduction\GameIntroductionState.cs" />
      <Compile Include="Assets\Scripts\GameStates\Introduction\GameIntroductionStateGUI.cs" />
      <Compile Include="Assets\Scripts\GameStates\PlayGame\PlayGameState.cs" />
      <Compile Include="Assets\Scripts\GameStates\PlayGame\PlayGameStateGUI.cs" />
      <Compile Include="Assets\Scripts\GameStates\ViewHighScore\ViewHighScoreState.cs" />
+     <Compile Include="Assets\Scripts\GameStates\ViewHighScore\ViewHighScoreStateGUI.cs" />
+     <Compile Include="Assets\Scripts\GameStates\ViewHighScore\ViewHighScoreTimeout.cs" />
      <Compile Include="Assets\Scripts\Library\ApplicationState\ApplicationState.cs" />
      <Compile Include="Assets\Scripts\Library\ApplicationState\ApplicationStateDelegate.cs" />
      <Compile Include="Assets\Scripts\Library\ApplicationState\ApplicationStateManager.cs" />

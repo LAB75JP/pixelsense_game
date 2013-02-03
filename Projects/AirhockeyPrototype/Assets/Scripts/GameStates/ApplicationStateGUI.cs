@@ -12,6 +12,16 @@ public abstract class ApplicationStateGUI <G> : Manager <G> where G : MonoBehavi
 	public Transform topLeft;
 	public Transform bottomRight;
 	
+	private Transform m_Transform;
+	protected Transform CachedTransform {
+		get {
+			if (m_Transform == null) {
+				m_Transform = transform;
+			}
+			return (m_Transform);
+		}
+	}
+	
 	protected override void InitializeManager () {
 		gameObject.SetActive (false);
 		

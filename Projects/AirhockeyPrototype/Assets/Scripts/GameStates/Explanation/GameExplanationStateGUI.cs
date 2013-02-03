@@ -4,16 +4,6 @@ using Edelweiss.ApplicationState;
 
 public class GameExplanationStateGUI : ApplicationStateGUI <GameExplanationStateGUI> {
 	
-	private Transform m_Transform;
-	public Transform CachedTransform {
-		get {
-			if (m_Transform == null) {
-				m_Transform = transform;
-			}
-			return (m_Transform);
-		}
-	}
-	
 	public override bool IsDestroyedOnLoad {
 		get {
 			return (true);
