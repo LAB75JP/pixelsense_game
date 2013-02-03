@@ -2,12 +2,12 @@
 // Author:
 //   Andreas Suter (andy@edelweissinteractive.com)
 //
-// Copyright (C) 2011-2012 Edelweiss Interactive (http://edelweissinteractive.com)
+// Copyright (C) 2011-2013 Edelweiss Interactive (http://edelweissinteractive.com)
 //
 
 using UnityEngine;
 
-namespace Edelweiss.Utils {
+namespace Edelweiss.Transition {
 
 	public class Transition {
 		public static TransitionDelegate GetTransitionDelegate (TransitionEnum a_TransitionEnum) {

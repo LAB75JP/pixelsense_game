@@ -2,14 +2,14 @@
 // Author:
 //   Andreas Suter (andy@edelweissinteractive.com)
 //
-// Copyright (C) 2012 Edelweiss Interactive (http://edelweissinteractive.com)
+// Copyright (C) 2012-2013 Edelweiss Interactive (http://edelweissinteractive.com)
 //
 
 using UnityEngine;
 using System.Collections;
 
-namespace Edelweiss.Utils {
-	
+namespace Edelweiss.Utilities {
+
 	public class MatrixSupport {
 	
 		public static Matrix4x4 Lerp (Matrix4x4 a_From, Matrix4x4 a_To, float a_Value) {
