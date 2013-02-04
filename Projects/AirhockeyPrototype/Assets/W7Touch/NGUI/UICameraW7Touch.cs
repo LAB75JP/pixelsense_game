@@ -38,7 +38,7 @@ public class UICameraW7Touch : MonoBehaviour {
         for (int i = 0; i < W7TouchManager.GetTouchCount(); ++i) {
             W7Touch touch = W7TouchManager.GetTouch(i);
             UICamera.currentTouchID = (int)touch.Id;
-            UICamera.currentTouch = uiCamera.GetTouch(UICamera.currentTouchID);
+            UICamera.currentTouch = UICamera.GetTouch(UICamera.currentTouchID);
 
             bool pressed = (touch.Phase == TouchPhase.Began);
             bool unpressed = (touch.Phase == TouchPhase.Canceled) || (touch.Phase == TouchPhase.Ended);
@@ -59,7 +59,7 @@ public class UICameraW7Touch : MonoBehaviour {
             else if (UICamera.currentTouch.pressed != null) UICamera.currentCamera = UICamera.currentTouch.pressedCam;
 
             // If the touch has ended, remove it from the list
-            if (unpressed) uiCamera.RemoveTouch(UICamera.currentTouchID);
+            if (unpressed) UICamera.RemoveTouch(UICamera.currentTouchID);
 
             // multitouch
             W7TouchEvent ft = new W7TouchEvent();
