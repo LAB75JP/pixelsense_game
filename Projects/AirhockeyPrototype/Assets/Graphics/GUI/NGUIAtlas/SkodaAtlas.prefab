@@ -52,6 +52,7 @@ MonoBehaviour:
       y: 71
       width: 511
       height: 441
+    rotated: 0
     paddingLeft: 0
     paddingRight: .00195694715
     paddingTop: 0
@@ -59,16 +60,17 @@ MonoBehaviour:
   - name: Arrow
     outer:
       serializedVersion: 2
-      x: 0
+      x: 65
       y: 47
       width: 15
       height: 23
     inner:
       serializedVersion: 2
-      x: 0
+      x: 65
       y: 47
       width: 15
       height: 23
+    rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
@@ -76,16 +78,35 @@ MonoBehaviour:
   - name: Button
     outer:
       serializedVersion: 2
-      x: 0
+      x: 65
       y: 31
       width: 15
       height: 15
     inner:
       serializedVersion: 2
-      x: 1
+      x: 66
       y: 32
       width: 13
       height: 13
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Window
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 6
+      width: 64
+      height: 64
+    inner:
+      serializedVersion: 2
+      x: 5
+      y: 11
+      width: 54
+      height: 54
+    rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0

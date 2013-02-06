@@ -7,8 +7,8 @@ Properties {
 // two texture cards: full thing
 Subshader { 
     Pass {
-        SetTexture[_MainTex] { combine texture }
-        SetTexture[_ReflectionTex] { matrix [_ProjMatrix] combine texture * previous }
+        SetTexture [_MainTex] { combine texture }
+        SetTexture [_ReflectionTex] { matrix [_ProjMatrix] combine texture * previous }
     }
 }
 

@@ -1,8 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\W7Touch\NGUI\UICameraW7Touch.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\CameraManager.cs">
     <Files>
-      <File FileName="Assets\W7Touch\NGUI\UICameraW7Touch.cs" Line="62" Column="30" />
+      <File FileName="Assets\Scripts\Managers\CameraManager.cs" Line="25" Column="57" />
+      <File FileName="Assets\Scripts\Managers\AirhockeyManager.cs" Line="13" Column="27" />
+      <File FileName="Assets\Scripts\GamePlay\Player.cs" Line="48" Column="21" />
+      <File FileName="Assets\Scripts\Managers\GameStates\PlayGame\PlayGameState.cs" Line="12" Column="25" />
+      <File FileName="Assets\Scripts\Managers\GameStates\PlayGame\PlayGameStateTimer.cs" Line="13" Column="66" />
+      <File FileName="Assets\Scripts\Managers\GameStates\PlayGame\PlayGameStateGUI.cs" Line="21" Column="77" />
+      <File FileName="Assets\Scripts\GamePlay\Spawner.cs" Line="33" Column="56" />
+      <File FileName="Assets\Scripts\GamePlay\SpawnedObject.cs" Line="8" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

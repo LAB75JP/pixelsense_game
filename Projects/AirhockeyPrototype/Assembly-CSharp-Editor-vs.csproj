@@ -78,6 +78,10 @@
      <Compile Include="Assets\NGUI\Scripts\Editor\UITexturePacker.cs" />
      <Compile Include="Assets\NGUI\Scripts\Editor\UITiledSpriteInspector.cs" />
      <Compile Include="Assets\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
+     <Compile Include="Assets\Scripts\Library\ExperimentalSpline\Editor\SplineComponentEditor.cs" />
+     <Compile Include="Assets\Scripts\Library\ExperimentalSpline\Editor\SplineControlPointComponentEditor.cs" />
+     <Compile Include="Assets\Scripts\Library\ExperimentalSpline\Editor\SplineDrawer.cs" />
+     <Compile Include="Assets\Scripts\Library\ExperimentalSpline\Editor\SplineWindow.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
@@ -104,10 +108,12 @@
      <None Include="Assets\NGUI\Examples\Other\English.txt" />
      <None Include="Assets\NGUI\Examples\Other\French.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed).shader" />
+     <None Include="Assets\Hard Surface Pro\HardSurface Shaders\HardSurface Pro Transparent Diffuse.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (HardClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\Hard Surface Pro\HardSurface Shaders\HardSurface Pro Opaque Diffuse.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
